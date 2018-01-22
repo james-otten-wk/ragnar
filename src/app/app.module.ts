@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ActionsModule } from 'app/actions/actions.module';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/components/app.component';
+import { GeneratedModule } from 'app/components/generated/generated.module';
 import { HomeModule } from 'app/components/home/home.module';
+import { InteractionsModule } from 'app/components/interactions/interactions.module';
 import { TasksModule } from 'app/components/tasks/tasks.module';
 import { GlobalErrorHandler } from 'app/infrastructure/global-error-handler';
 import { RepositoriesModule } from 'app/repositories/repositories.module';
@@ -20,7 +22,9 @@ import { StoreModule } from 'app/store/store.module';
     ActionsModule,
     StoreModule,
     ServicesModule,
-    RepositoriesModule
+    RepositoriesModule,
+    InteractionsModule,
+    GeneratedModule
   ],
   bootstrap: [AppComponent],
   providers: [{
