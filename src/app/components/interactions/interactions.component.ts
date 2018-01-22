@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['interactions.component.scss']
 })
 export class InteractionsComponent {
-
+  value = 'asdasd';
 }
