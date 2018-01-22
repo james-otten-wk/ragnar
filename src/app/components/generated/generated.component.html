@@ -1,4 +1,7 @@
 <div class="generated-component">
-  <input />
-  <input />
+  <ul>
+      <li *ngFor="let item of items$ | async">
+        <generated-data-component [parentValue$]="serverCounter$" [Id]="item"></generated-data-component>
+      </li>
+    </ul>
 </div>

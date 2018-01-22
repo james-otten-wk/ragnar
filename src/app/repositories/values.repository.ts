@@ -17,6 +17,6 @@ export class ValuesRepository extends BaseRepository {
     //   return d.toString().length + this.counter++;
     // });
 
-    return Observable.of(++this.counter);
+    return Observable.of((this.counter += 100));
   }
 }

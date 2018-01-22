@@ -11,8 +11,13 @@ export class HomeServerUpdatedAction implements IAction {
   ) {}
 
   execute() {
-    this.valuesRepository
-      .getData()
-      .subscribe(value => this.store.homeStore.serverCounter$.next(value));
+    this.valuesRepository.getData().subscribe(value => {
+      const items = [];
+      for (let i = 0; i < value; i++) {
+        items.push(i);
+      }
+      this.store.homeStore.items$.next(items);
+      this.store.homeStore.serverCounter$.next(value);
+    });
   }
 }
