@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { ValuesRepository } from 'app/repositories/values.repository';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ValuesService {
-  private current = 0;
+  constructor(private valuesRepository: ValuesRepository) {}
 
-  getValue(): number {
-    return this.current++;
+  getValue(): Observable<number> {
+    return this.valuesRepository.getServerNumber();
   }
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'home-data-component',
@@ -6,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['home-data.component.scss']
 })
 export class HomeDataComponent {
-  @Input() data: number;
+  @Input() data$: Observable<number>;
   @Input() title: string;
   @Output() onUpdated = new EventEmitter<boolean>();
 
