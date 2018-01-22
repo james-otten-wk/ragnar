@@ -13,5 +13,6 @@ export class AddTaskComponent {
 
   click() {
     this.tasksService.addTask(new Task(this.newItemText));
+    this.newItemText = '';
   }
 }
