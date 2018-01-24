@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Task } from 'app/components/tasks/task';
 import { TasksService } from 'app/service/tasks.service';
 
@@ -7,9 +7,10 @@ import { TasksService } from 'app/service/tasks.service';
   templateUrl: 'add-task.component.html',
 })
 export class AddTaskComponent {
-  @Input() newItemText: string;
+  newItemText: string;
 
-  constructor(private tasksService: TasksService) {}
+  constructor(private tasksService: TasksService) {
+  }
 
   click() {
     this.tasksService.addTask(new Task(this.newItemText));

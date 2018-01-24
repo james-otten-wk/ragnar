@@ -1,24 +1,24 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { TaskFilterType } from 'app/components/tasks/task';
+import { TasksService } from 'app/service/tasks.service';
 
 @Component({
   selector: 'task-filter-component',
   templateUrl: 'task-filter.component.html',
 })
 export class TaskFilterComponent {
-  constructor() {}
-
-  @Output() onFilter = new EventEmitter<TaskFilterType>();
+  constructor(readonly tasksService: TasksService) {
+  }
 
   clickShowAll() {
-    this.onFilter.emit(TaskFilterType.all);
+    this.tasksService.setFilter(TaskFilterType.all);
   }
 
   clickCompleted() {
-    this.onFilter.emit(TaskFilterType.completed);
+    this.tasksService.setFilter(TaskFilterType.completed);
   }
 
   clickNotStarted() {
-    this.onFilter.emit(TaskFilterType.NotStarted);
+    this.tasksService.setFilter(TaskFilterType.NotStarted);    
   }
 }
