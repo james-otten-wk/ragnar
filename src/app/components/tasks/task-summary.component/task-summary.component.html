@@ -1,7 +1,7 @@
 <div>
-  <span>Count: {{totalCount}}</span><br/>
-  <span>Average Length: {{averageLength}}</span><br/>
-  <span>Completed: {{completedCount}}</span><br/>
-  <span>Incomplete: {{incompleteCount}}</span><br/>
-  <span>Last alphabetical: {{lastAlphabetical}}</span>
+  <span>Count: {{totalCount | async}}</span><br/>
+  <span>Average Length: {{averageLength | async}}</span><br/>
+  <span>Completed: {{completedCount | async}}</span><br/>
+  <span>Incomplete: {{incompleteCount | async}}</span><br/>
+  <span>Last alphabetical: {{lastAlphabetical | async}}</span>
 </div>

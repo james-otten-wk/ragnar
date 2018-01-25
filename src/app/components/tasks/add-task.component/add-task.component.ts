@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { TaskAddAction } from 'app/actions/tasks/task-add.action';
 import { Task } from 'app/components/tasks/task';
-import { TasksService } from 'app/service/tasks.service';
+import { Store } from 'app/store/store';
 
 @Component({
   selector: 'add-task-component',
@@ -9,11 +10,12 @@ import { TasksService } from 'app/service/tasks.service';
 export class AddTaskComponent {
   newItemText: string;
 
-  constructor(private tasksService: TasksService) {
+  constructor(readonly store: Store,
+    readonly taskAddAction: TaskAddAction) {
   }
 
   click() {
-    this.tasksService.addTask(new Task(this.newItemText));
+    this.taskAddAction.execute(new Task(this.newItemText));
     this.newItemText = '';
   }
 }
