@@ -1,0 +1,21 @@
+@import "../../../../sass/variables";
+
+.add-task-component input {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+
+  width: 100%;
+  font-size: $font-size;
+  font-family: $task-font-family;
+  font-weight: inherit;
+  line-height: 1.4em;
+  outline: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.add-task-component button {
+  
+}

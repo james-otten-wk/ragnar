@@ -1,7 +1,5 @@
-<li>
-  <div>
-    <span>{{item.name}}</span>
-    <input type="checkbox" [checked]="item.completed" (change)="updateCheckbox()" />
-    <button (click)="removeItem()">X</button>
-  </div>
-</li>
+<div class="list-item-component">
+  <input type="checkbox" [checked]="item.completed" (change)="updateCheckbox()" />
+  <label>{{item.name}}</label>
+  <button (click)="removeItem()">X</button>
+</div>

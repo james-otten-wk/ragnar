@@ -1,0 +1,21 @@
+@import "../../../../sass/variables";
+
+.list-item-component {
+  border-bottom: 1px solid #ededed;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.list-item-component label {
+  font-size: 24px;
+  height: 40px;
+  margin-left: 45px;
+  padding: 15px 60px 15px 15px;
+  line-height: 1.2;
+}
+
+// .list-item-component button {
+//   position: absolute;
+//   right: 10px;
+// }

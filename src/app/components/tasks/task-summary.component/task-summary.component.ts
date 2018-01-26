@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'task-summary-component',
   templateUrl: 'task-summary.component.html',
+  styleUrls: ['task-summary.component.scss']
 })
 export class TaskSummaryComponent {
   constructor(readonly store: Store) {

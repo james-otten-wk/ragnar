@@ -4,7 +4,8 @@ import { IListItem } from '../list-item/IListItem';
 
 @Component({
   selector: 'list-component',
-  templateUrl: 'list.component.html'
+  templateUrl: 'list.component.html',
+  styleUrls: ['list.component.scss']
 })
 export class ListComponent {
   @Input() listItems$: Observable<IListItem[]>;

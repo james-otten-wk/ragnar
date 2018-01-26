@@ -3,7 +3,8 @@ import { IListItem } from './IListItem';
 
 @Component({
   selector: 'list-item-component',
-  templateUrl: 'list-item.component.html'
+  templateUrl: 'list-item.component.html',
+  styleUrls: ['list-item.component.scss']
 })
 export class ListItemComponent {
   @Input() item: IListItem;

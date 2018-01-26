@@ -1,3 +1,5 @@
-<ul *ngFor="let item of listItems$ | async">
-  <list-item-component [item]="item" (onCheckboxChange)="updateCheckbox($event)" (onRemoveItem)="removeItem($event)"></list-item-component>
+<ul class="list-component">
+  <li *ngFor="let item of listItems$ | async">
+      <list-item-component [item]="item" (onCheckboxChange)="updateCheckbox($event)" (onRemoveItem)="removeItem($event)"></list-item-component>
+  </li>
 </ul>

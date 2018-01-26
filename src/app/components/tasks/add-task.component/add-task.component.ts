@@ -6,6 +6,7 @@ import { Store } from 'app/store/store';
 @Component({
   selector: 'add-task-component',
   templateUrl: 'add-task.component.html',
+  styleUrls: ['add-task.component.scss']
 })
 export class AddTaskComponent {
   newItemText: string;

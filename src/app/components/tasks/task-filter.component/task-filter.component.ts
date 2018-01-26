@@ -6,6 +6,7 @@ import { TaskFilterIncompleteAction } from 'app/actions/tasks/task-filter-incomp
 @Component({
   selector: 'task-filter-component',
   templateUrl: 'task-filter.component.html',
+  styleUrls: ['task-filter.component.scss']
 })
 export class TaskFilterComponent {
   constructor(readonly taskFilterAllAction: TaskFilterAllAction,

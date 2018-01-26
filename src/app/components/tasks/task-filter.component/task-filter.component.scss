@@ -1,0 +1,21 @@
+@import "../../../../sass/variables";
+
+.task-filter-component {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.task-filter-component li {
+  display: inline;
+  margin: 0 auto;
+}
+
+.task-filter-component li a {
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
