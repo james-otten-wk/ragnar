@@ -29,15 +29,30 @@ export class TasksService {
     this.store.taskStore.lastAlphabetical.next(this.getLastAlphabetical(visible));
   }
 
-  getCompletedTasks(tasks: Task[]): Task[] {
+  removeItem() {
+
+  }
+
+  findItemIndex(item: Task) {
+    return this.store.taskStore.allTasks.value.find(it => it.id === item.id);
+  }
+
+  getNextId(): number {
+    if (this.store.taskStore.allTasks.value.length === 0) {
+      return 0;
+    }
+    return this.store.taskStore.allTasks.value.reduce((a: Task, b: Task) => a > b ? a : b).id + 1;
+  }
+
+  private getCompletedTasks(tasks: Task[]): Task[] {
     return tasks.filter(item => item.completed === true);
   }
 
-  getNotStartedTasks(tasks: Task[]): Task[] {
+  private getNotStartedTasks(tasks: Task[]): Task[] {
     return tasks.filter(item => item.completed === false);
   }
 
-  getAverageLength(tasks: Task[]): number {
+  private getAverageLength(tasks: Task[]): number {
     if (tasks.length > 0) {
       var length = tasks.reduce((acc: number, x: Task) => {
         return acc + x.name.length;
@@ -48,7 +63,7 @@ export class TasksService {
     }
   }
 
-  getLastAlphabetical(task: Task[]): string {
+  private getLastAlphabetical(task: Task[]): string {
     if (task.length > 0) {
       return task.sort((a: Task, b: Task) => {
         if (a.name > b.name) {
