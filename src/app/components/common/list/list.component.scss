@@ -1,7 +1,28 @@
 @import "../../../../sass/variables";
 
 .list-component {
+  position: relative;
+}
+
+.list-container {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.list-select-all:after {
+  content: '❯';
+  color: #e6e6e6;
+  font-size: 22px;
+  padding: 10px 27px 10px 27px;
+}
+
+.list-select-all {
+  position: absolute;
+  top: -65px;
+  appearance: none;
+  width: 40px;
+  border: none;
+  outline: none;
+  transform: rotate(90deg);
 }

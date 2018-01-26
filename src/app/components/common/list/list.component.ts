@@ -9,8 +9,11 @@ import { IListItem } from '../list-item/IListItem';
 })
 export class ListComponent {
   @Input() listItems$: Observable<IListItem[]>;
+  //@Input() allItemsSelected$: Observable<boolean>;
+  allItemsSelected: boolean = false;
   @Output() onCheckboxChange: EventEmitter<IListItem> = new EventEmitter<IListItem>();
   @Output() onRemoveItem: EventEmitter<IListItem> = new EventEmitter<IListItem>();
+  @Output() onSelectAll: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   updateCheckbox(payload: IListItem) {
     this.onCheckboxChange.emit(payload);
@@ -18,5 +21,10 @@ export class ListComponent {
 
   removeItem(payload: IListItem) {
     this.onRemoveItem.emit(payload);
+  }
+
+  updateSelectAll() {
+    this.allItemsSelected = !this.allItemsSelected;
+    this.onSelectAll.emit(this.allItemsSelected);
   }
 }

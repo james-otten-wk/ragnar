@@ -1,5 +1,5 @@
 <div class="list-item-component">
-  <input type="checkbox" [checked]="item.completed" (change)="updateCheckbox()" />
+  <input class="list-item-completed-checkbox" type="checkbox" [checked]="item.completed" (change)="updateCheckbox()" />
   <label>{{item.name}}</label>
-  <button (click)="removeItem()">X</button>
+  <button class="list-item-remove" (click)="removeItem()"></button>
 </div>

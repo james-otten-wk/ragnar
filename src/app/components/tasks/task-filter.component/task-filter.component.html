@@ -1,5 +1,8 @@
-<ul class="task-filter-component">
-    <li><button (click)="clickShowAll()">Show All</button></li>
-    <li><button (click)="clickCompleted()">Completed</button></li>
-    <li><button (click)="clickNotStarted()">Not Started</button></li>
-</ul>
+<div class="task-filter-component">
+    <span class="task-remaining">{{remainingTasks | async}} items left</span>
+    <ul class="task-filter-container">
+        <li><button [class.selected-task-filter]="showAllSelected()" (click)="clickShowAll()">Show All</button></li>
+        <li><button [class.selected-task-filter]="completedSelected()" (click)="clickCompleted()">Completed</button></li>
+        <li><button [class.selected-task-filter]="notStartedSelected()" (click)="clickNotStarted()">Not Started</button></li>
+    </ul>
+</div>

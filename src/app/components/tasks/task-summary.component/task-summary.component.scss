@@ -1,12 +1,13 @@
 @import "../../../../sass/variables";
 
-.task-summary-component {
+.task-summary-container {
   color: #777;
   padding: 10px 15px;
-  height: 20px;
+  height: 70px;
   border-top: 1px solid #e6e6e6;
+  margin: 0;
 }
 
-.task-summary-component li {
-  display: inline;
+.task-summary-container li {
+  list-style: none;
 }

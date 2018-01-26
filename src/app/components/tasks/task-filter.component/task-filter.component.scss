@@ -1,21 +1,38 @@
 @import "../../../../sass/variables";
 
-.task-filter-component {
+.task-filter-container {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
+  height: 40px;
 }
 
-.task-filter-component li {
+.task-filter-container li {
   display: inline;
   margin: 0 auto;
 }
 
-.task-filter-component li a {
-  margin: 3px;
+.task-filter-container li button {
+  outline: none;
+  background-color: inherit;
+  color: #4d4d4d;
+  margin: 8px;
   padding: 3px 7px;
   text-decoration: none;
   border: 1px solid transparent;
   font-size: 14px;
+}
+
+.task-filter-container li button.selected-task-filter {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.task-remaining {
+  position: absolute;
+  color: #4d4d4d;
+  font-size: 14px;
+  margin: 10px;
+  padding: 3px 7px;
+  float: left;
 }

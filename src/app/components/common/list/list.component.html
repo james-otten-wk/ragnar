@@ -1,5 +1,8 @@
-<ul class="list-component">
+<div class="list-component">
+<input class="list-select-all" type="checkbox" [checked]="allItemsSelected" (click)="updateSelectAll()" />
+<ul class="list-container">
   <li *ngFor="let item of listItems$ | async">
       <list-item-component [item]="item" (onCheckboxChange)="updateCheckbox($event)" (onRemoveItem)="removeItem($event)"></list-item-component>
   </li>
 </ul>
+</div>
