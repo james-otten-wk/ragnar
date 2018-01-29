@@ -14,7 +14,10 @@ import { Observable } from 'rxjs';
 export class TasksListComponent {
   listItems$: Observable<Task[]>;
 
-  constructor(readonly store: Store, readonly updateAction: TaskUpdateAction, readonly removeAction: TaskRemoveAction, readonly selectAllAction: TaskSelectAllUpdateAction) {
+  constructor(readonly store: Store,
+    readonly updateAction: TaskUpdateAction,
+    readonly removeAction: TaskRemoveAction,
+    readonly selectAllAction: TaskSelectAllUpdateAction) {
     this.listItems$ = store.taskStore.visibleTasks;
   }
 

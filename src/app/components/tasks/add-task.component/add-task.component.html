@@ -1,4 +1,4 @@
 <div class="add-task-component">
-  <input type="text" [(ngModel)]="newItemText" placeholder="What do you have to do?" />
-  <button class="add-task-button" title="Add" (click)="click()">+</button>
+  <input #newTaskText type="text" (keyup.enter)="addItem(newTaskText.value)" placeholder="What do you have to do?" />
+  <button class="add-task-button" title="Add" (click)="addItem(newTaskText.value)">+</button>
 </div>
