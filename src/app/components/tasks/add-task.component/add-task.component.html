@@ -1,4 +1,4 @@
 <div class="add-task-component">
-  <input #newTaskText type="text" (keyup.enter)="addItem(newTaskText.value)" placeholder="What do you have to do?" />
-  <button class="add-task-button" title="Add" (click)="addItem(newTaskText.value)">+</button>
+  <input #newTaskText type="text" (keyup.enter)="addItem(newTaskText.value);newTaskText.value=''" placeholder="What do you have to do?" />
+  <button class="add-task-button" title="Add" (click)="addItem(newTaskText.value);newTaskText.value=''">+</button>
 </div>
