@@ -1,10 +1,10 @@
 @import "../../../../sass/variables";
 
 .task-summary-container {
-  color: #777;
+  color: $text-color;
   padding: 10px 15px;
   height: 70px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid $dark-accent;
   margin: 0;
 }
 

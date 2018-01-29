@@ -16,7 +16,7 @@
 .task-filter-container li button {
   outline: none;
   background-color: inherit;
-  color: #4d4d4d;
+  color: $text-color;
   margin: 8px;
   padding: 3px 7px;
   text-decoration: none;
@@ -24,13 +24,13 @@
   font-size: 14px;
 }
 
-.task-filter-container li button.selected-task-filter {
-  border-color: rgba(175, 47, 47, 0.2);
+.task-filter-container li .selected-task-filter {
+  border-color: $selected-filter-border;
 }
 
 .task-remaining {
   position: absolute;
-  color: #4d4d4d;
+  color: $text-color;
   font-size: 14px;
   margin: 10px;
   padding: 3px 7px;

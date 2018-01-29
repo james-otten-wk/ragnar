@@ -2,7 +2,7 @@
 
 .list-item-component {
   position: relative;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid $item-border-color;
   font-size: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -11,7 +11,7 @@
 .list-item-component label {
   font-size: 24px;
   height: 40px;
-  padding: 15px 0px 15px 15px;
+  padding: 15px 0 15px 15px;
   line-height: 1.2;
   position: absolute;
   top: 2px;
@@ -25,23 +25,19 @@
 }
 
 .list-item-component .list-item-completed-checkbox:after {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='-10 -18 100 135'><circle cx='50' cy='50' r='50' fill='none' stroke='#ededed' stroke-width='3'/></svg>");
 }
 
 .list-item-component .list-item-completed-checkbox:checked:after {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='-10 -18 100 135'><circle cx='50' cy='50' r='50' fill='none' stroke='#bddad5' stroke-width='3'/><path fill='#5dc2af' d='M72 25L42 71 27 56l-4 4 20 20 34-52z'/></svg>");
 }
 
 .list-item-component .list-item-remove:after {
-  content: '×';
+  content: "×";
 }
 
 .list-item-component .list-item-remove:hover {
-  color: #af5b5e;
-}
-
-.list-item-component .list-item-remove {
-  display: none;
+  color: $remove-emphasis-color;
 }
 
 .list-item-component:hover .list-item-remove {
@@ -49,13 +45,14 @@
 }
 
 .list-item-component .list-item-remove {
+  display: none;
   outline: none;
   appearance: none;
   background: none;
   border: none;
   font-size: 30px;
   width: 40px;
-  color: #cc9a9a;
+  color: $remove-base-color;
   position: absolute;
   right: 10px;
   top: 15px;

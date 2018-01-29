@@ -1,26 +1,29 @@
 @import "../../../sass/variables";
 
 .tasksHeader {
-  text-align: center;
+  margin-bottom: 10px;
+  color: $header-text-color;
   font-size: 100px;
   font-weight: 100;
-  color: rgba(175, 47, 47, 0.15);
-  margin-bottom: 10px;
+  text-align: center;
 }
 
-.task-component input, li, h1, h2 {
+.task-component input,
+.task-component li,
+.task-component h1,
+h2 {
   font-family: $task-font-family;
 }
 
 .task-container {
-  background: #f5f5f5;
+  background: $task-container-background;
 }
 
 .task-component {
-  background: #fff;
+  background: $task-background;
   margin: 0 auto;
-  color: #4d4d4d;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  color: $text-color;
+  box-shadow: $task-shadow;
   max-width: 550px;
 }
 
