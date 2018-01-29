@@ -12,8 +12,11 @@ export class TaskUpdateAction implements IDataAction<Task> {
 
   execute(payload: IListItem) {
     var currentItems = this.store.taskStore.allTasks.value;
-    var updateIndex = currentItems.findIndex(x => x.id === payload.id);
-    currentItems.splice(updateIndex, 1, payload);
+    for (let item of currentItems) {
+      if (item.id === payload.id) {
+        item.completed = payload.completed;
+      }
+    }
     
     this.store.taskStore.allTasks.next(currentItems);
     this.service.applyFilterUpdateSummary();

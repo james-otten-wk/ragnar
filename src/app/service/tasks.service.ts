@@ -41,7 +41,7 @@ export class TasksService {
     if (this.store.taskStore.allTasks.value.length === 0) {
       return 0;
     }
-    return this.store.taskStore.allTasks.value.reduce((a: Task, b: Task) => a > b ? a : b).id + 1;
+    return this.store.taskStore.allTasks.value.reduce((a, b) => a.id > b.id ? a : b).id + 1;
   }
 
   private getCompletedTasks(tasks: Task[]): Task[] {

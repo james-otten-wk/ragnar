@@ -5,8 +5,7 @@ import { Store } from 'app/store/store';
 
 @Injectable()
 export class TaskSelectAllUpdateAction implements IDataAction<boolean> {
-  constructor(private store: Store, readonly service: TasksService) {
-  }
+  constructor(private store: Store, readonly service: TasksService) {}
 
   execute(payload: boolean) {
     var currentItems = this.store.taskStore.allTasks.value;
@@ -15,8 +14,6 @@ export class TaskSelectAllUpdateAction implements IDataAction<boolean> {
         item.completed = payload;
       }
     }
-    //var updateIndex = currentItems.findIndex(x => x.id === payload.id);
-    //currentItems.splice(updateIndex, 1, payload);
     
     this.store.taskStore.allTasks.next(currentItems);
     this.service.applyFilterUpdateSummary();
