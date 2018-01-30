@@ -29,14 +29,6 @@ export class TasksService {
     this.store.taskStore.lastAlphabetical.next(this.getLastAlphabetical(visible));
   }
 
-  removeItem() {
-
-  }
-
-  findItemIndex(item: Task) {
-    return this.store.taskStore.allTasks.value.find(it => it.id === item.id);
-  }
-
   getNextId(): number {
     if (this.store.taskStore.allTasks.value.length === 0) {
       return 0;
