@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Task, TaskFilterType } from 'app/components/tasks/task';
+import { Task, TaskFilterType } from 'app/models/task';
 import { Store } from 'app/store/store';
 
 @Injectable()

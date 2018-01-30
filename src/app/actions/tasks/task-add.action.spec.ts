@@ -1,5 +1,5 @@
 import { TaskAddAction } from 'app/actions/tasks/task-add.action';
-import { Task } from 'app/components/tasks/task';
+import { Task } from 'app/models/task';
 import { TasksService } from 'app/service/tasks.service';
 import { Store } from 'app/store/store';
 

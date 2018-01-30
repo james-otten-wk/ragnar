@@ -1,5 +1,5 @@
 import { TaskRemoveAction } from 'app/actions/tasks/task-remove.action';
-import { Task } from 'app/components/tasks/task';
+import { Task } from 'app/models/task';
 import { TasksService } from 'app/service/tasks.service';
 import { Store } from 'app/store/store';
 

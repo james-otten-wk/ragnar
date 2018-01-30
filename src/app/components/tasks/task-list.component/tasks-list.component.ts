@@ -3,7 +3,7 @@ import { TaskRemoveAction } from 'app/actions/tasks/task-remove.action';
 import { TaskSelectAllUpdateAction } from 'app/actions/tasks/task-select-all-update.action';
 import { TaskUpdateAction } from 'app/actions/tasks/task-update.action';
 import { IListItem } from 'app/components/common/list-item/IListItem';
-import { Task } from 'app/components/tasks/task';
+import { Task } from 'app/models/task';
 import { Store } from 'app/store/store';
 import { Observable } from 'rxjs';
 

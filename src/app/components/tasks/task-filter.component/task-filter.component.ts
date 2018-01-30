@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TaskFilterAllAction } from 'app/actions/tasks/task-filter-all.action';
 import { TaskFilterCompletedAction } from 'app/actions/tasks/task-filter-completed.action';
 import { TaskFilterIncompleteAction } from 'app/actions/tasks/task-filter-incomplete.action';
-import { TaskFilterType } from 'app/components/tasks/task';
+import { TaskFilterType } from 'app/models/task';
 import { Store } from 'app/store/store';
 import { Observable } from 'rxjs/Observable';
 

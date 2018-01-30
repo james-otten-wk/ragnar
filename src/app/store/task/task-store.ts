@@ -1,4 +1,4 @@
-import { Task, TaskFilterType } from 'app/components/tasks/task';
+import { Task, TaskFilterType } from 'app/models/task';
 import { BehaviorSubject } from 'rxjs';
 
 export class TaskStore {

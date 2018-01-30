@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { TaskAddAction } from 'app/actions/tasks/task-add.action';
 import { AddTaskComponent } from 'app/components/tasks/add-task.component/add-task.component';
-import { Task } from 'app/components/tasks/task';
+import { Task } from 'app/models/task';
 
 describe('AddTaskComponent', () => {
   const addTaskAction = <TaskAddAction> {

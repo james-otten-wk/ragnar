@@ -1,5 +1,5 @@
 import { TaskFilterIncompleteAction } from 'app/actions/tasks/task-filter-incomplete.action';
-import { TaskFilterType } from 'app/components/tasks/task';
+import { TaskFilterType } from 'app/models/task';
 import { TasksService } from 'app/service/tasks.service';
 import { Store } from 'app/store/store';
 
